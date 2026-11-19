@@ -1,0 +1,93 @@
+name: DonutCommands
+version: 1.0.0
+main: com.donutcommands.DonutCommands
+api-version: "1.20"
+description: DonutSMP-style economy, sell GUI, shop, orders, auction house and utility commands.
+authors: [DonutCommands]
+
+commands:
+  bal:
+    description: Show your balance
+    aliases: [balance, money]
+    usage: /bal [player]
+  pay:
+    description: Send money to a player
+    usage: /pay <player> <amount>
+  baltop:
+    description: Richest players
+    aliases: [balancetop]
+    usage: /baltop
+  sell:
+    description: Open the sell GUI
+    usage: /sell
+  sellhand:
+    description: Sell the item in your hand
+    usage: /sellhand
+  shop:
+    description: Open the shop
+    usage: /shop
+  order:
+    description: Buy orders (players request items, others fill them)
+    aliases: [orders]
+    usage: /order [create|mine|cancel|collect]
+  ah:
+    description: Auction house
+    aliases: [auction, auctionhouse]
+    usage: /ah [sell|mine|collect]
+  shards:
+    description: Show your shards
+    aliases: [shard]
+    usage: /shards [player]
+  rtp:
+    description: Random teleport
+    aliases: [wild]
+    usage: /rtp
+  spawn:
+    description: Teleport to spawn
+    usage: /spawn
+  setspawn:
+    description: Set the spawn
+    usage: /setspawn
+    permission: donutcommands.admin
+  home:
+    description: Teleport to a home
+    aliases: [homes]
+    usage: /home [name]
+  sethome:
+    description: Set a home
+    usage: /sethome [name]
+  delhome:
+    description: Delete a home
+    usage: /delhome <name>
+  tpa:
+    description: Request to teleport to a player
+    usage: /tpa <player>
+  tpaccept:
+    description: Accept a teleport request
+    aliases: [tpyes]
+    usage: /tpaccept
+  tpdeny:
+    description: Deny a teleport request
+    aliases: [tpno]
+    usage: /tpdeny
+  msg:
+    description: Private message
+    aliases: [m, w, tell, whisper]
+    usage: /msg <player> <message>
+  reply:
+    description: Reply to the last private message
+    aliases: [r]
+    usage: /reply <message>
+  stats:
+    description: Show player stats
+    usage: /stats [player]
+  donut:
+    description: Admin command
+    aliases: [dc, donutcommands]
+    usage: /donut <reload|eco|shards>
+    permission: donutcommands.admin
+
+permissions:
+  donutcommands.admin:
+    description: Admin access
+    default: op
